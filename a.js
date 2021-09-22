@@ -1,7 +1,7 @@
-var w=50;
-var h=166;
+var w = 50;
+var h = 166;
 const readline = require('readline-sync');
-w =readline.question('體重(kg)');
-h =readline.question('身高(cm)');
+w = readline.question('體重(kg)');
+h = readline.question('身高(cm)');
 var bmi =w/((h/100)**2);
 console.log("BMI = "+ bmi);
