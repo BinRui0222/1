@@ -1,3 +1,5 @@
+var w;
+var h;
 const readline = require('readline-sync');
 w =readline.question('體重(kg)');
 h =readline.question('身高(cm)');
