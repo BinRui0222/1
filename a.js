@@ -1,7 +1,9 @@
 const readline = require('readline-sync');
-w = readline.question('Weight(kg)');
-h = readline.question('Height(cm)');
-if (w > 635 | w < 5 |h > 272 | h< 56){
+we = readline.question('Weight(kg)');
+he = readline.question('Height(cm)');
+w = Number(we);
+h = Number(he);
+if (isNaN(w)|isNaN(h)|w > 635 | w < 5 |h > 272 | h< 56){
     console.log("數值錯誤");
     return 0 ;
 }
