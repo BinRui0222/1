@@ -1,17 +1,33 @@
 const readline = require('readline-sync');
-var t = 10,b = 1,n = 7,Target;
+var top = 10,bott = 1,now = 7,Target;
 while(true){
-    Target=readline.question('目前在'+ n + 'F,要去哪樓?');
+    Target=readline.question('目前在'+ now + 'F,要去哪樓?');
     Target=parseInt(Target);
-    if(isNaN(Target) || Target > t || Target < b){
+    if(isNaN(Target) || Target > top || Target < bott){
         console.log('Wrong,輸入1~10整數');
         continue;
     }
-    if(Target == n){
+    if(Target == now){
         console.log("Leave");
         break;
     }
     else{
-        console.log('continue');
+        if(Target < now){
+            console.log("電梯下樓");
+            while(Target < now){
+                now --;
+                console.log("電梯在" +now+ "樓");
+            }
+            console.log(now);
+        }
+        else{
+            console.log("電梯上樓");
+            while(Target > now){
+                now ++;
+                console.log("電梯在" +now+ "樓");
+            }
+            console.log(now);
+            
+        }
     }
 }
