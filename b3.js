@@ -1,4 +1,4 @@
-const readline = require('readline-sync');
+const readline = require('readline-sync');//我沒遲交，檔案連結壞掉重新傳
 const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 var top = 10,bott = 0,now = 3,Target;
 var floor = ["B3","B2","B1","1","2","3","4","5","6","7","8"];
