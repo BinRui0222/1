@@ -40,10 +40,14 @@ for(let i=0;i<p.length;i++){
     p.splice(r,1);
 }
 p1.sort()
+p1.reverse()
 console.log("Player1: " + p1);
 p2.sort()
+p2.reverse()
 console.log("Player2: " + p2);
 p3.sort()
+p3.reverse()
 console.log("Player3: " + p3);
 p4.sort()
+p4.reverse()
 console.log("Player4: " + p4);
