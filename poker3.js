@@ -20,7 +20,30 @@ var p1=[];p2=[];p3=[];p4=[];
 function compare(a,b){
     return Math.random()-0.5;
 }
-p.sort(compare);
+function compare2(a,b){
+    if(b.charCodeAt(1) == a.charCodeAt(1)){
+    }
+    else{
+        return b.charCodeAt(1) - a.charCodeAt(1);
+    }
+}
+function compare3(a,b){
+    if(b.charCodeAt(0) == a.charCodeAt(0)){
+    }
+    else{
+        return b.charCodeAt(0) - a.charCodeAt(0);
+    }
+}
+function compare1(a,b){
+    if(b.charCodeAt(2) == a.charCodeAt(2)){
+    }
+    else{
+        return b.charCodeAt(2) - a.charCodeAt(2);
+    }
+}
+p.sort(compare1);
+p.sort(compare2);
+p.sort(compare3);
 for(let i=0;i<p.length;i++){
     var r = Math.floor(Math.random() * p.length);
     console.log(p[r]);
@@ -39,15 +62,11 @@ for(let i=0;i<p.length;i++){
     p4.push(p[r]);
     p.splice(r,1);
 }
-p1.sort()
-p1.reverse()
+p1.sort(compare1);p1.sort(compare2);p1.sort(compare3);
+p2.sort(compare1);p2.sort(compare2);p2.sort(compare3);
+p3.sort(compare1);p3.sort(compare2);p3.sort(compare3);
+p4.sort(compare1);p4.sort(compare2);p4.sort(compare3);
 console.log("Player1: " + p1);
-p2.sort()
-p2.reverse()
 console.log("Player2: " + p2);
-p3.sort()
-p3.reverse()
 console.log("Player3: " + p3);
-p4.sort()
-p4.reverse()
 console.log("Player4: " + p4);
